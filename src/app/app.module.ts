@@ -5,7 +5,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { ToolbarComponent } from './components/toolbar/toolbar.component';
+import { StationModule } from "./components/station/station.module";
+import { ToolbarComponent } from './components/dashboard/toolbar/toolbar.component';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
@@ -19,6 +20,8 @@ import { MatIconModule } from '@angular/material/icon';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+
+    StationModule,
 
     MatToolbarModule,
     MatIconModule,
