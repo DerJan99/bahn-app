@@ -44,7 +44,7 @@ Entwickeln Sie eine Webseite, die die API der Deutschen Bahn nutzt.
 
 <ins>**Mindestanforderungen**</ins>
 
-- Aufrufbare Webseite (lokal ausreichend, also nicht auf  Webserver) **[1P]** | 
+- Aufrufbare Webseite (lokal ausreichend, also nicht auf  Webserver) **[1P]**  
  - Grundgerüst aus HTML zum Aufbau der Seitenstruktur **[2P]** 
  - Eine Funktion, mit der man einen beliebigen deutschen Bahnhof aussuchen kann (Feld zum Eintragen oder vergleichbares) **[2P]**
  - Eine Funktion, bei der man ein Datum eingeben kann (Feld zum Eintragen oder vergleichbar) **[2P]**
