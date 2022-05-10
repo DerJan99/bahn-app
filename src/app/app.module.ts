@@ -6,8 +6,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { StationModule } from "./components/station/station.module";
+
+// TODO: Add dashboard module
 import { ToolbarComponent } from './components/dashboard/toolbar/toolbar.component';
 
+// TODO: Add material module
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 
