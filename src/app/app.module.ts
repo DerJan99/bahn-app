@@ -9,6 +9,8 @@ import { DashboardModule } from "./components/dashboard/dashboard.module";
 import { StationModule } from "./components/station/station.module";
 import { SharedModule } from "./components/shared/shared.module";
 
+import {HttpClientService} from "./services";
+
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatIconModule } from "@angular/material/icon";
 
@@ -28,7 +30,9 @@ import { MatIconModule } from "@angular/material/icon";
     MatToolbarModule,
     MatIconModule,
   ],
-  providers: [],
+  providers: [
+    HttpClientService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
