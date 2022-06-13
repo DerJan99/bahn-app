@@ -1,0 +1,11 @@
+<ng-container>
+  <div class="information-wrapper" [hidden]="loading">
+    <span *ngFor="let schedule of schedules">
+      {{schedule.track ? "Gleis: " + schedule.track + ", " : ""}}{{schedule.trainName + ", " +
+    schedule.arrivalTime.toLocaleTimeString() +
+    " - " +
+    schedule.departureTime.toLocaleTimeString()}}
+      <br>
+    </span>
+  </div>
+</ng-container>

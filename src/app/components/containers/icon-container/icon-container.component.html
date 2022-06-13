@@ -1,0 +1,7 @@
+<ng-container *ngIf="stationExist">
+  <div class="icon-wrapper" [hidden]="!stationExist">
+    <ng-container *ngFor="let icon of icons">
+      <app-icon [iconName]="icon.iconName" [tooltipContent]="icon.tooltipContent" [isActive]="icon.isActive"></app-icon>
+    </ng-container>
+  </div>
+</ng-container>

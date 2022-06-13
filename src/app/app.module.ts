@@ -1,16 +1,19 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {RouterModule} from "@angular/router";
+import {HttpClientModule} from "@angular/common/http";
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import {AppRoutingModule} from './app-routing.module';
+import {AppComponent} from './app.component';
 
-import { DashboardModule } from "./components/dashboard/dashboard.module";
-import { StationModule } from "./components/station/station.module";
-import { SharedModule } from "./components/shared/shared.module";
+import {ContainerModule} from "@bahn-app/components/containers";
+import {SharedModule} from "@bahn-app/components/shared";
+import {PageModule} from "@bahn-app/components/pages";
 
-import { MatToolbarModule } from "@angular/material/toolbar";
-import { MatIconModule } from "@angular/material/icon";
+import {MatToolbarModule} from "@angular/material/toolbar";
+import {MatIconModule} from "@angular/material/icon";
+import {MatAutocompleteModule} from "@angular/material/autocomplete";
 
 @NgModule({
   declarations: [
@@ -20,13 +23,16 @@ import { MatIconModule } from "@angular/material/icon";
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    RouterModule,
+    HttpClientModule,
 
-    DashboardModule,
-    StationModule,
+    ContainerModule,
     SharedModule,
+    PageModule,
 
     MatToolbarModule,
     MatIconModule,
+    MatAutocompleteModule
   ],
   providers: [],
   bootstrap: [AppComponent]

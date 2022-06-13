@@ -10,6 +10,8 @@
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
+    "strictPropertyInitialization": false,
+    "strictNullChecks": false,
     "sourceMap": true,
     "declaration": false,
     "downlevelIteration": true,
@@ -21,7 +23,24 @@
     "lib": [
       "es2020",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@bahn-app/services": [
+        "src/app/services/index.ts"
+      ],
+      "@bahn-app/interfaces": [
+        "src/app/interfaces/index.ts"
+      ],
+      "@bahn-app/components/containers": [
+        "src/app/components/containers/container.module.ts"
+      ],
+      "@bahn-app/components/shared": [
+        "src/app/components/shared/shared.module.ts"
+      ],
+      "@bahn-app/components/pages": [
+        "src/app/components/pages/page.module.ts"
+      ],
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

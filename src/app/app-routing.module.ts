@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {StationContainerComponent} from "./components/station/station-container/station-container.component";
+
+import {StationPageComponent} from "@bahn-app/components/pages";
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', component: StationContainerComponent},
+  { path: '', pathMatch: 'full', component: StationPageComponent},
 ];
 
 @NgModule({
