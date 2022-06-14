@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {FormControl} from "@angular/forms";
 import {MatAutocompleteSelectedEvent} from "@angular/material/autocomplete";
-import {debounceTime, distinctUntilChanged, map, Observable, startWith} from "rxjs";
+import {distinctUntilChanged, map, Observable, startWith} from "rxjs";
 
 import {EventService, HttpService} from "@bahn-app/services";
 import {ComStations, Stations} from "@bahn-app/interfaces";
@@ -36,7 +36,6 @@ export class SearchComponent implements OnInit {
   private fetchStation() {
     this.filteredOptions = this.formControl.valueChanges.pipe(
       startWith(""),
-      debounceTime(200),
       distinctUntilChanged(),
       map(value => this.filterOptions(value || ""))
     ) as Observable<string[]>;

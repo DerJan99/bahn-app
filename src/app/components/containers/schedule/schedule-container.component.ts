@@ -33,6 +33,8 @@ export class ScheduleContainerComponent implements OnInit {
     this.eventService.stationEventBroker$.subscribe((station: Stations | null) => {
       if (station !== null) {
         this.getSchedule(station.id)
+      } else {
+        this.loading = true;
       }
     });
   }

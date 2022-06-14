@@ -26,8 +26,8 @@ export class InformationContainerComponent implements OnInit {
     this.stationEvent.stationEventBroker$.subscribe((station: Stations | null) => {
       if (station !== null) {
         this.station = station;
-        this.createAvailabilityArr(station);
         this.stationExist = true;
+        this.createAvailabilityArr(station);
       } else {
         this.stationExist = false;
       }
