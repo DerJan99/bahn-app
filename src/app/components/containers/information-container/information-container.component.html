@@ -6,25 +6,10 @@
     " " +
     station.address.city}}</span><br/>
     <span>EVA-Nummer: {{station.id}}</span>
-    <div *ngIf="station.DBinformation.availability">
-      <span>Öffnungszeiten:</span>
-      <ul>
-        <li>Montags: {{station.DBinformation.availability.monday.fromTime}}
-          - {{station.DBinformation.availability.monday.toTime}}</li>
-        <li>Dienstags: {{station.DBinformation.availability.tuesday.fromTime}}
-          - {{station.DBinformation.availability.tuesday.toTime}}</li>
-        <li>Mittwochs: {{station.DBinformation.availability.wednesday.fromTime}}
-          - {{station.DBinformation.availability.wednesday.toTime}}</li>
-        <li>Donnerstag: {{station.DBinformation.availability.thursday.fromTime}}
-          - {{station.DBinformation.availability.thursday.toTime}}</li>
-        <li>Freitag: {{station.DBinformation.availability.friday.fromTime}}
-          - {{station.DBinformation.availability.friday.toTime}}</li>
-        <li>Samstag: {{station.DBinformation.availability.saturday.fromTime}}
-          - {{station.DBinformation.availability.saturday.toTime}}</li>
-        <li>Sonntag: {{station.DBinformation.availability.sunday.fromTime}}
-          - {{station.DBinformation.availability.sunday.toTime}}</li>
-        <li>Ferienzeiten: {{station.DBinformation.availability.holiday.fromTime}}
-          - {{station.DBinformation.availability.holiday.toTime}}</li>
+    <div>
+      <span *ngIf="availabilityArr.length > 0">Öffnungszeiten:</span>
+      <ul *ngFor="let availability of availabilityArr">
+        <li>{{availability.dayName + ": " + availability.fromTime + " - " + availability.toTime}}</li>
       </ul>
     </div>
   </div>

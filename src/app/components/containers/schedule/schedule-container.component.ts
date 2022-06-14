@@ -61,6 +61,5 @@ export class ScheduleContainerComponent implements OnInit {
           : undefined
       });
     })
-    console.log(this.schedules);
   }
 }

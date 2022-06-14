@@ -18,24 +18,28 @@ export class SearchComponent implements OnInit {
   formControl = new FormControl();
 
   constructor(private httpService: HttpService, private eventService: EventService) {
+    this.fetchStation();
   }
 
   public ngOnInit() {
-    this.filteredOptions = this.formControl.valueChanges.pipe(
-      startWith(""),
-      debounceTime(400),
-      distinctUntilChanged(),
-      map(value => this.filterOptions(value || ""))
-    ) as Observable<string[]>;
   }
 
   private filterOptions(value: string) {
     const filterValue = value.toLowerCase();
-    if (this.options !== undefined && filterValue.length > 2) {
+    if (this.options !== undefined && filterValue.length > 0) {
       this.getStations(filterValue);
-      return this.options.filter(option => option.toLowerCase().includes(filterValue))
+      return this.options.filter(option => option.toLowerCase().startsWith(filterValue))
     }
     return [];
+  }
+
+  private fetchStation() {
+    this.filteredOptions = this.formControl.valueChanges.pipe(
+      startWith(""),
+      debounceTime(200),
+      distinctUntilChanged(),
+      map(value => this.filterOptions(value || ""))
+    ) as Observable<string[]>;
   }
 
   private getStations(searchString: string) {
