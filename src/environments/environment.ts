@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiToken: "2250f59d6db8e8c30784f7373f82d683",
+  apiToken: "",
   apiUrl: "https://v5.db.transport.rest/"
 };
 
